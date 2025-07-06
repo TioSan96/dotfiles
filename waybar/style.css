@@ -1,0 +1,579 @@
+/*
+ * Estilos globais para todos os elementos da barra
+ */
+* {
+    border: none;
+    border-radius: 5px;
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 14px;
+    min-height: 5px;
+}
+
+/*
+ * Importa o tema principal (mocha)
+ */
+@import "themes/mocha.css";
+
+/*
+ * Janela principal do Waybar
+ */
+window#waybar {
+    border: none; /* Sem borda */
+    background-color: transparent; /* Fundo completamente transparente */
+    border-radius: 6px;
+    margin-top: 2px;
+}
+
+/*
+ * Waybar quando está oculta
+ */
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+ * Título da janela ativa (pode ser usado para mostrar o nome da janela)
+ */
+#window {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+/*
+ * Área dos workspaces (área dos botões de áreas de trabalho)
+ */
+#workspaces {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 4px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(12, 13, 16, 0.3);
+}
+
+/*
+ * Botões dos workspaces (cada área de trabalho)
+ */
+#workspaces button {
+    transition: none;
+    color: #7aa2f7;
+    background: transparent;
+    margin-right: 10px;
+}
+
+/*
+ * Workspace persistente (sempre visível)
+ */
+#workspaces button.persistent {
+    transition: none;
+    color: #7aa2f7;
+    background: transparent;
+    font-size: 4px;
+}
+
+/*
+ * Workspace vazio (sem janelas)
+ */
+#workspaces button.empty {
+    color: #e9e5f0;
+    font-size: 2px;
+    transition: none;
+    background: transparent;
+}
+
+/*
+ * Workspace ativo (selecionado)
+ */
+#workspaces button.active {
+    background: rgba(59, 97, 200, 0.122); /* Fundo mais suave para workspace ativa */
+    color: rgba(31, 69, 209, 0.908); /* Branco puro para texto ativo */
+    border: none;
+    padding-left: 6px;
+    padding-right: 8px;
+    transition: all 0.2s ease-in-out;
+}
+  
+/*
+ * Hover nos workspaces
+ */
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.985); /* Fundo suave no hover */
+    color: rgba(240, 240, 240, 0.9); /* Texto branco mais claro */
+    border: none; /* Sem borda no hover */
+    transition: all 0.2s ease-in-out;
+}
+  
+/*
+ * Foco no workspace (usado ao navegar com teclado)
+ */
+#workspaces button:focus {
+    outline: 2px solid rgba(0, 255, 200, 1.0); /* Verde-azulado para indicar foco */
+    outline-offset: -2px;
+}
+
+/*
+ * Módulo de rede (Ethernet/WiFi) - COM TALENTO!
+ */
+#network {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+    border: 1px solid rgba(122, 162, 247, 0.1);
+    box-shadow: 0 1px 4px rgba(122, 162, 247, 0.1);
+}
+
+#network:hover {
+    background: rgba(28, 32, 44, 0.4);
+    border: 1px solid rgba(122, 162, 247, 0.2);
+    box-shadow: 0 2px 8px rgba(122, 162, 247, 0.15);
+}
+
+
+
+/*
+ * Módulo de áudio (ícone e status do volume) - COM TALENTO!
+ */
+#pulseaudio {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio:hover {
+    background: rgba(28, 32, 44, 0.3);
+    color: #F1F1F1;
+}
+
+/*
+ * Módulo de bateria
+ */
+#battery {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: none;
+    font-weight: bold;
+    color: #161320;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Bateria carregando ou plugada
+ */
+#battery.charging, #battery.plugged {
+    color: #161320;
+    background-color: transparent;
+}
+
+/*
+ * Bateria crítica (piscando)
+ */
+#battery.critical:not(.charging) {
+    background-color: #B5E8E0;
+    color: #161320;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #B5E8E0;
+    }
+}
+
+/*
+ * Módulo de brilho da tela
+ */
+#backlight {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 0px;
+    border-radius: 6px;
+    transition: none;
+    color: #161320;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo do relógio
+ */
+#clock {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo de memória RAM
+ */
+#memory {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#memory.warning {
+    color: #f7768e;
+}
+
+/*
+ * Módulo de disco
+ */
+#disk {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo de CPU
+ */
+#cpu {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#cpu.warning {
+    color: #f7768e;
+}
+
+/*
+ * Área da bandeja do sistema (ícones de aplicativos em background)
+ */
+#tray {
+   margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Lançador de aplicativos customizado
+ */
+#custom-launcher {
+        margin-top: 2px;
+        margin-left: 4px;
+        padding-left: 6px;
+        padding-right: 10px;
+        margin-right: 1px;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: none;
+        font-weight: bold;
+        color: #f1f1f1;
+        background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Botão de desligar customizado
+ */
+#custom-power {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 10px;
+    margin-right: 1px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: none;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#custom-power:hover {
+    background: rgba(5, 63, 133, 0.214); /* Fundo suave no hover */
+    color: rgba(240, 240, 240, 0.9); /* Texto branco mais claro */
+    border: none; /* Sem borda no hover */
+    transition: all 0.2s ease-in-out;
+}
+
+/*
+ * Efeito hover especial para o relógio
+ */
+#clock:hover {
+    background: rgba(28, 32, 44, 0.3);
+    color: #F1F1F1;
+}
+
+/*
+ * Efeito especial para o relógio
+ */
+#clock {
+    /* Efeito visual especial sem animação */
+}
+
+/*
+ * Módulo de atualizações customizado - COM TALENTO!
+ */
+#custom-updater {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+    border: none;
+    box-shadow: none;
+}
+
+#custom-updater:hover {
+    background: rgba(28, 32, 44, 0.3);
+    color: #F1F1F1;
+}
+
+/*
+ * Módulo de mídia customizado (ex: Spotify)
+ */
+#custom-media {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: none;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#custom-media:hover {
+    background: rgba(28, 32, 44, 0.3);
+    color: #F1F1F1;
+}
+
+/*
+ * Taskbar (caso esteja ativada)
+ */
+#taskbar {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#taskbar button:hover {
+    background: rgba(255, 255, 255, 0.122);/* Fundo suave no hover */
+    color: rgba(240, 240, 240, 0.9); /* Texto branco mais claro */
+    border: none; /* Sem borda no hover */
+    transition: all 0.2s ease-in-out;
+}
+  
+/*
+ * Módulo de notificações customizado
+ */
+#custom-notification {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo idle_inhibitor (impede o sistema de dormir)
+ */
+#idle_inhibitor {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo customizado para GPU
+ */
+#custom-gpu {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+  }
+
+/*
+ * Módulo customizado para temperatura da GPU
+ */
+  #custom-gpu_temp {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+/*
+ * Módulo customizado para bateria do controle Xbox
+ */
+#custom-xbox_battery {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: none;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}    
+
+#custom-cpu {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#custom-cpu.cpu-graph {
+    color: #7aa2f7;
+}    
+
+#custom-memory {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 6px;
+    margin-bottom: 2px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+}
+
+#custom-memory.memory-graph {
+    color: #7aa2f7;
+}    
+
+/*
+ * Módulo de velocidade de rede - COM TALENTO!
+ */
+#custom-network-speed {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+    border: 1px solid rgba(122, 162, 247, 0.1);
+    box-shadow: 0 1px 4px rgba(122, 162, 247, 0.1);
+}
+
+#custom-network-speed:hover {
+    background: rgba(28, 32, 44, 0.4);
+    border: 1px solid rgba(122, 162, 247, 0.2);
+    box-shadow: 0 2px 8px rgba(122, 162, 247, 0.15);
+}
+
+#custom-network-speed.network-speed {
+    color: #7aa2f7;
+}
