@@ -1,0 +1,7 @@
+{
+  "format": "⏻",
+  "tooltip": "Menu de energia",
+  "on-click": "~/.config/waybar/modules/power_menu.sh",
+  "interval": 3600
+}
+

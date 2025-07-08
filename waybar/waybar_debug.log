@@ -1,0 +1,12 @@
+[2025-07-07 02:31:29.007] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config
+[2025-07-07 02:31:29.007] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config.jsonc
+[2025-07-07 02:31:29.007] [debug] Try expanding: $HOME/.config/waybar/config
+[2025-07-07 02:31:29.007] [debug] Try expanding: $HOME/.config/waybar/config.jsonc
+[2025-07-07 02:31:29.007] [debug] Found config file: /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 02:31:29.007] [info] Using configuration file /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 02:31:29.008] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-07 02:31:29.008] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/style.css
+[2025-07-07 02:31:29.008] [debug] Try expanding: $HOME/.config/waybar/style.css
+[2025-07-07 02:31:29.008] [debug] Found config file: /home/hotplugin/.config/waybar/style.css
+[2025-07-07 02:31:29.008] [info] Using CSS file /home/hotplugin/.config/waybar/style.css
+[2025-07-07 02:31:29.009] [error] style.css:721:11'display' is not a valid property name

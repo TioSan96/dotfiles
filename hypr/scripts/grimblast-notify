@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Verifica o comando do Grimblast
+grimblast "$@"
+
+# Checa se o comando foi executado com sucesso
+if [ $? -eq 0 ]; then
+    notify-send "Captura de Tela" "Captura salva com sucesso ou copiada para a área de transferência."
+else
+    notify-send "Captura de Tela" "Falha ao realizar a captura." -u critical
+fi

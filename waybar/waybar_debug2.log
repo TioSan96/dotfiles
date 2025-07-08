@@ -1,0 +1,12 @@
+[2025-07-07 02:32:10.414] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config
+[2025-07-07 02:32:10.414] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config.jsonc
+[2025-07-07 02:32:10.414] [debug] Try expanding: $HOME/.config/waybar/config
+[2025-07-07 02:32:10.414] [debug] Try expanding: $HOME/.config/waybar/config.jsonc
+[2025-07-07 02:32:10.414] [debug] Found config file: /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 02:32:10.414] [info] Using configuration file /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 02:32:10.415] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-07 02:32:10.415] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/style.css
+[2025-07-07 02:32:10.415] [debug] Try expanding: $HOME/.config/waybar/style.css
+[2025-07-07 02:32:10.415] [debug] Found config file: /home/hotplugin/.config/waybar/style.css
+[2025-07-07 02:32:10.415] [info] Using CSS file /home/hotplugin/.config/waybar/style.css
+[2025-07-07 02:32:10.415] [error] style.css:721:15'align-items' is not a valid property name

@@ -1,0 +1,12 @@
+[2025-07-07 11:22:59.440] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config
+[2025-07-07 11:22:59.440] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config.jsonc
+[2025-07-07 11:22:59.440] [debug] Try expanding: $HOME/.config/waybar/config
+[2025-07-07 11:22:59.440] [debug] Try expanding: $HOME/.config/waybar/config.jsonc
+[2025-07-07 11:22:59.440] [debug] Found config file: /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 11:22:59.440] [info] Using configuration file /home/hotplugin/.config/waybar/config.jsonc
+[2025-07-07 11:22:59.440] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-07-07 11:22:59.440] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/style.css
+[2025-07-07 11:22:59.440] [debug] Try expanding: $HOME/.config/waybar/style.css
+[2025-07-07 11:22:59.440] [debug] Found config file: /home/hotplugin/.config/waybar/style.css
+[2025-07-07 11:22:59.440] [info] Using CSS file /home/hotplugin/.config/waybar/style.css
+[2025-07-07 11:22:59.441] [error] style.css:707:21Junk at end of value for margin-left
