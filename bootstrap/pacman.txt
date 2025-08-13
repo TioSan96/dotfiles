@@ -7,6 +7,7 @@ bibata-cursor-theme
 breeze
 breeze-gtk
 breeze5
+breeze-icons
 btop
 blueman
 clipse
@@ -68,6 +69,8 @@ swayosd
 python-pip
 python-psutil
 python-requests
+qt5ct
+qt6ct
 qt5-examples
 qt5-imageformats
 qt5-tools
@@ -76,6 +79,9 @@ qt6-examples
 qt6-imageformats
 qt6-tools
 qt6-wayland
+kvantum-qt5
+kvantum-qt6
+plasma-integration
 rofi
 sddm
 slurp

@@ -18,7 +18,7 @@ Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, 
 - btop: `btop/.config/btop`
 - GTK 3/4: `gtk3/.config/gtk-3.0`, `gtk4/.config/gtk-4.0`
 - xsettingsd: `xsettingsd/.config/xsettingsd`
-- Qt5ct: `qt5ct/.config/qt5ct`
+- Qt5ct/Qt6ct: `qt5ct/.config/qt5ct`, `qt6ct` (gerado no install)
 - Code - OSS: `code-oss/.config/Code - OSS/User`
 - Extras em `config/.config` (assets, nwg-look, ksnip, user-dirs, mimeapps)
 - Shell: `.bashrc` em `shell/.bashrc`
@@ -36,21 +36,22 @@ chmod +x install.sh
 ```
 
 O script irá:
-- Instalar `stow` (e `yay` se necessário) via `pacman`
+- Instalar `stow` (e `yay` se necessário)
 - Instalar pacotes do `bootstrap/pacman.txt` e AUR do `bootstrap/aur.txt`
 - Stow de todos os pacotes para `$HOME`
-- Instalar extensões do Code‑OSS se presentes
+- Configurar temas:
+  - GTK: Breeze‑Dark, ícones Papirus‑Dark, cursor Bibata‑Modern‑Ice, fonte JetBrainsMonoNL Nerd Font Mono 11
+  - Qt: `qt5ct`/`qt6ct` com tema Breeze e ícones Papirus‑Dark
 - Tentar recarregar Hyprland/Waybar se estiverem rodando
 
 ## Personalização
+- Ajuste temas no `qt5ct`/`qt6ct` e `gsettings` conforme preferir
 - Adicione novos pacotes aos arquivos em `bootstrap/`
 - Coloque novos diretórios de configuração seguindo o padrão: `<pkg>/.config/<nome>` e eles serão stowados
-- Para fontes/ícones de usuário, use `icons/.local/share/icons` (e `fonts` se criar)
 
 ## Dicas
 - Atualizar dotfiles com alterações locais:
   ```bash
-  # Exemplo: sincronizar alterações locais para o repositório
   rsync -avh --delete ~/.config/hypr/ hypr/.config/hypr/
   rsync -avh --delete ~/.config/waybar/ waybar/.config/waybar/
   ```

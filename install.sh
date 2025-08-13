@@ -61,6 +61,19 @@ for pkg in hypr waybar kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss confi
   fi
 done
 
+# GTK/Qt theming defaults
+echo "Configuring GTK/Qt themes..."
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" || true
+gsettings set org.gnome.desktop.interface gtk-theme "Breeze-Dark" || true
+gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark" || true
+gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice" || true
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMonoNL Nerd Font Mono 11" || true
+
+# Qt (qt5ct/qt6ct) config skeletons if not present
+mkdir -p "$HOME/.config/qt5ct" "$HOME/.config/qt6ct"
+printf "[Appearance]\nicon_theme=Papirus-Dark\nstyle=Breeze\n" > "$HOME/.config/qt5ct/qt5ct.conf" || true
+printf "[Appearance]\nicon_theme=Papirus-Dark\nstyle=Breeze\n" > "$HOME/.config/qt6ct/qt6ct.conf" || true
+
 # VS Code OSS extensions
 if command -v code >/dev/null 2>&1 && [ -f bootstrap/code-extensions.txt ]; then
   echo "Installing VS Code OSS extensions..."
