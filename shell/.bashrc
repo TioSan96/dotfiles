@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 # Mostra imagem no terminal com fastfetch e kitty graphics
-FASTFETCH_IMAGE="$HOME/Imagens/kisamew.jpg"
+FASTFETCH_IMAGE="$HOME/Imagens/kisame.png"
 if command -v fastfetch >/dev/null 2>&1; then
   fastfetch --kitty-direct "$FASTFETCH_IMAGE"
 fi
