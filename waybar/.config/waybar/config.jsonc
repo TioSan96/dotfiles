@@ -21,17 +21,16 @@
     "modules-center": [
         "custom/ejetar_midia",
         "custom/youtube-music",
-        "custom/audio-visualizer",
+        //"custom/miniplayer",
         "custom/media"
             
     ],
 	"modules-right": [
         "tray",
         "pulseaudio",
-        "custom/cpu",
-        "custom/memory",
         "custom/updater",
         "network",
+        "custom/weather",
         "clock",
         "custom/notification"
     ],
@@ -155,23 +154,6 @@
         "show-passive-items": true,
         "show-passive-items": true
     },
-    "custom/cpu": {
-        "interval": 1,
-        "format": "{text}",
-        "return-type": "json",
-        "exec": "$HOME/.config/waybar/modules/custom_cpu.py",
-        "on-click": "$HOME/.config/waybar/modules/custom_cpu.py --toggle",
-        "tooltip": true
-    },
-    
-    "custom/memory": {
-        "interval": 5,
-        "format": "{text}",
-        "return-type": "json",
-        "exec": "$HOME/.config/waybar/modules/custom_memory.py",
-        "on-click": "$HOME/.config/waybar/modules/custom_memory.py --toggle",
-        "tooltip": true
-    }, 
     "custom/updater": {
     "format": "<span color='#7aa2f7'></span> {}",
     "exec": "$HOME/.config/hypr/scripts/check_and_update.sh",
@@ -250,15 +232,25 @@
         "hide-empty-text": true
     },
 
-    "custom/audio-visualizer": {
+    "custom/miniplayer": {
         "interval": 1,
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "exec": "$HOME/.config/waybar/modules/miniplayer.py",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next",
+        "tooltip": true
+    },
+    "custom/weather": {
+        "interval": 600,
         "format": "{text}",
         "return-type": "json",
-        "max-length": 20,
-        "exec": "$HOME/.config/waybar/modules/dynamic_visualizer.py",
+        "exec": "$HOME/.config/waybar/modules/weather_maua.py",
         "tooltip": true,
-        "escape": true,
-        "hide-empty-text": true
+        "on-click": "$HOME/.config/waybar/modules/weather_maua.py"
     }
 
 }

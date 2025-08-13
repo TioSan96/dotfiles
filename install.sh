@@ -53,7 +53,8 @@ if [ -f bootstrap/aur.txt ] && [ -s bootstrap/aur.txt ]; then
 fi
 
 # Dotfiles with Stow
-for pkg in hypr waybar kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss config shell; do
+# Add new packages here to be stowed into $HOME
+for pkg in hypr waybar kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss config shell icons; do
   if [ -d "$pkg" ]; then
     echo "Stowing $pkg"
     stow -v -R -t "$HOME" "$pkg"

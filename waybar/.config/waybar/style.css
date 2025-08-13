@@ -142,29 +142,28 @@ window#waybar.hidden {
     box-shadow: 0 2px 8px rgba(122, 162, 247, 0.15);
 }
 
-
-
 /*
  * Módulo de áudio (ícone e status do volume) - COM TALENTO!
  */
-#pulseaudio {
+#pulseaudio, #battery, #backlight, #clock, #memory, #disk, #cpu, #tray, #custom-updater, #custom-media, #custom-notification, #idle_inhibitor, #custom-gpu, #custom-gpu_temp, #custom-xbox_battery, #custom-cpu, #custom-memory, #custom-network-speed, #custom-power, #custom-launcher, #taskbar, #custom-weather {
     margin-top: 2px;
     margin-left: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
     margin-bottom: 2px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: none;
+    transition: all 0.3s ease;
     color: #F1F1F1;
     background: rgba(28, 32, 44, 0.3);
-    border: none;
-    box-shadow: none;
+    border: 1px solid rgba(122, 162, 247, 0.1);
+    box-shadow: 0 1px 4px rgba(122, 162, 247, 0.1);
 }
 
-#pulseaudio:hover {
-    background: rgba(28, 32, 44, 0.3);
-    color: #F1F1F1;
+#pulseaudio:hover, #battery:hover, #backlight:hover, #clock:hover, #memory:hover, #disk:hover, #cpu:hover, #tray:hover, #custom-updater:hover, #custom-media:hover, #custom-notification:hover, #idle_inhibitor:hover, #custom-gpu:hover, #custom-gpu_temp:hover, #custom-xbox_battery:hover, #custom-cpu:hover, #custom-memory:hover, #custom-network-speed:hover, #custom-power:hover, #custom-launcher:hover, #taskbar:hover, #custom-weather:hover {
+    background: rgba(28, 32, 44, 0.4);
+    border: 1px solid rgba(122, 162, 247, 0.2);
+    box-shadow: 0 2px 8px rgba(122, 162, 247, 0.15);
 }
 
 /*
@@ -576,4 +575,25 @@ window#waybar.hidden {
 
 #custom-network-speed.network-speed {
     color: #7aa2f7;
+}
+
+#custom-weather {
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: #F1F1F1;
+    background: rgba(28, 32, 44, 0.3);
+    border: 1px solid rgba(122, 162, 247, 0.1);
+    box-shadow: 0 1px 4px rgba(122, 162, 247, 0.1);
+}
+
+#custom-weather:hover {
+    background: rgba(28, 32, 44, 0.4);
+    border: 1px solid rgba(122, 162, 247, 0.2);
+    box-shadow: 0 2px 8px rgba(122, 162, 247, 0.15);
 }
