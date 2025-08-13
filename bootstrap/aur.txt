@@ -1,0 +1,13 @@
+bibata-cursor-theme
+brave-bin
+clipse
+clipse-debug
+grimblast-git
+hyprswitch
+hyprswitch-debug
+qqc2-desktop-style5
+qqc2-desktop-style5-debug
+qt5ct-kde
+qt5ct-kde-debug
+yay
+yay-debug

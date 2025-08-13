@@ -1,0 +1,6 @@
+# Ignore temp and VCS
+.git/
+.gitignore
+README.md
+install.sh
+bootstrap/
