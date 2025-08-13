@@ -61,6 +61,19 @@ for pkg in hypr waybar kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss confi
   fi
 done
 
+# Dolphin viewers and codecs
+echo "Installing Dolphin viewers (Gwenview/MPV/Okular) and extras..."
+sudo pacman -S --needed --noconfirm gwenview mpv okular kio-extras kimageformats libheif || true
+
+# MIME defaults
+echo "Applying user MIME defaults..."
+xdg-mime default org.kde.dolphin.desktop inode/directory || true
+xdg-mime default org.kde.gwenview.desktop image/jpeg image/png image/webp image/gif image/bmp image/tiff image/svg+xml image/avif image/heif || true
+xdg-mime default mpv.desktop video/mp4 video/x-matroska video/webm video/x-msvideo video/x-ms-wmv video/quicktime || true
+xdg-mime default org.kde.okular.desktop application/pdf application/epub+zip application/x-djvu || true
+xdg-mime default org.kde.ark.desktop application/zip application/x-7z-compressed application/x-rar application/x-xz application/gzip application/x-bzip2 application/x-tar || true
+xdg-mime default code-oss.desktop text/plain text/x-shellscript application/json application/x-yaml text/markdown || true
+
 # GTK/Qt theming defaults
 echo "Configuring GTK/Qt themes..."
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" || true
