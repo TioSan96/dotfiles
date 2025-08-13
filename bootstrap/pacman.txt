@@ -23,6 +23,7 @@ ffmpegthumbs
 firefox
 fuse2
 git
+openssh
 gnome-screenshot
 grim
 grub

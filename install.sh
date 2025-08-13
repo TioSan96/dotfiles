@@ -105,3 +105,27 @@ if pgrep -x waybar >/dev/null 2>&1; then
 fi
 
 echo "All done."
+
+# Git personalization for Vinicius
+echo "Configuring Git and SSH for Vinicius..."
+git config --global user.name "Vinicius" || true
+git config --global user.email "skskskm@hotmail.com" || true
+git config --global init.defaultBranch main || true
+
+# SSH key setup (ed25519) if not exists
+if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+  mkdir -p "$HOME/.ssh"
+  ssh-keygen -t ed25519 -C "skskskm@hotmail.com" -N "" -f "$HOME/.ssh/id_ed25519" || true
+fi
+eval "$(ssh-agent -s)" >/dev/null 2>&1 || true
+ssh-add "$HOME/.ssh/id_ed25519" >/dev/null 2>&1 || true
+
+# If repo remote is HTTPS, switch to SSH
+if git -C "$REPO_DIR" remote get-url origin 2>/dev/null | grep -q '^https://github.com/'; then
+  git -C "$REPO_DIR" remote set-url origin "git@github.com:TioSan96/dotfiles.git" || true
+fi
+
+echo "Add this SSH key to GitHub → Settings → SSH keys:"
+if [ -f "$HOME/.ssh/id_ed25519.pub" ]; then
+  cat "$HOME/.ssh/id_ed25519.pub"
+fi
