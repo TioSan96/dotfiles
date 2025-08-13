@@ -9,7 +9,6 @@ breeze-gtk
 breeze5
 breeze-icons
 btop
-blueman
 clipse
 cmatrix
 code
@@ -45,6 +44,9 @@ nano
 network-manager-applet
 networkmanager
 blueman
+alsa-utils
+light
+wlogout
 nodejs
 noto-fonts
 noto-fonts-emoji
