@@ -7,6 +7,9 @@ Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, 
 - Acesso sudo
 - Conexão à internet
 
+## Preview
+![Desktop atual](assets/screenshots/desktop.png)
+
 ## O que está incluído
 - Hyprland: configs em `hypr/.config/hypr`
 - Waybar: temas, módulos e scripts em `waybar/.config/waybar`
@@ -20,6 +23,7 @@ Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, 
 - Extras em `config/.config` (assets, nwg-look, ksnip, user-dirs, mimeapps)
 - Shell: `.bashrc` em `shell/.bashrc`
 - Ícones locais: `icons/.local/share/icons`
+- Wallpapers: `wallpapers/.local/share/backgrounds/kisamew.jpg` (usado pelo Hyprland via `swww`)
 - Bootstrap de pacotes: `bootstrap/pacman.txt`, `bootstrap/aur.txt`
 - Extensões do Code OSS: `bootstrap/code-extensions.txt`
 

@@ -24,7 +24,6 @@ fuse2
 git
 gnome-screenshot
 grim
-grim
 grub
 gst-plugin-pipewire
 htop
@@ -51,6 +50,7 @@ noto-fonts-emoji
 npm
 nvidia-dkms
 nwg-look
+waypaper
 otf-font-awesome
 papirus-icon-theme
 pipewire
@@ -100,5 +100,3 @@ xdg-desktop-portal-hyprland
 xdg-utils
 xorg-server
 xorg-xinit
-yay
-yay-debug
