@@ -1,7 +1,11 @@
 #
 # ~/.bashrc
 #
-fastfetch --kitty-direct /home/hotplugin/Transferências/kisame.png
+# Mostra imagem no terminal com fastfetch e kitty graphics
+FASTFETCH_IMAGE="$HOME/Imagens/kisamew.jpg"
+if command -v fastfetch >/dev/null 2>&1; then
+  fastfetch --kitty-direct "$FASTFETCH_IMAGE"
+fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
