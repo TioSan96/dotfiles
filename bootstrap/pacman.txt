@@ -4,11 +4,11 @@ ark
 base
 base-devel
 bibata-cursor-theme
-brave-bin
 breeze
 breeze-gtk
 breeze5
 btop
+blueman
 clipse
 cmatrix
 code
@@ -24,13 +24,12 @@ fuse2
 git
 gnome-screenshot
 grim
-grimblast-git
+grim
 grub
 gst-plugin-pipewire
 htop
 hyprland
 hyprpaper
-hyprswitch
 iwd
 kde-cli-tools
 kdegraphics-thumbnailers
@@ -45,6 +44,7 @@ mako
 nano
 network-manager-applet
 networkmanager
+blueman
 nodejs
 noto-fonts
 noto-fonts-emoji
@@ -59,6 +59,12 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 polkit-kde-agent
+playerctl
+brightnessctl
+pavucontrol
+dconf
+swayidle
+swayosd
 python-pip
 python-psutil
 python-requests
@@ -66,7 +72,6 @@ qt5-examples
 qt5-imageformats
 qt5-tools
 qt5-wayland
-qt5ct-kde
 qt6-examples
 qt6-imageformats
 qt6-tools
