@@ -129,3 +129,24 @@ echo "Add this SSH key to GitHub → Settings → SSH keys:"
 if [ -f "$HOME/.ssh/id_ed25519.pub" ]; then
   cat "$HOME/.ssh/id_ed25519.pub"
 fi
+
+cat <<'EOF'
+
+How to use this SSH key (GitHub)
+1) Copy the entire key above (starts with ssh-ed25519 ...)
+2) Open: https://github.com/settings/keys
+   - Click "New SSH key"
+   - Title suggestion: "arch-hyprland"
+   - Paste the key and save
+3) Test authentication (expect a success message):
+   ssh -T git@github.com
+4) Ensure your dotfiles remote uses SSH:
+   git -C ~/dotfiles remote -v
+   # If it still shows https://, switch to SSH:
+   git -C ~/dotfiles remote set-url origin git@github.com:TioSan96/dotfiles.git
+5) Push normally:
+   git -C ~/dotfiles add -A
+   git -C ~/dotfiles commit -m "minhas alterações"
+   git -C ~/dotfiles push
+
+EOF
