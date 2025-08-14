@@ -1,4 +1,4 @@
-# dotfiles do Vinicius (Hyprland / Waybar / GTK / Qt / Kitty / Rofi)
+# dotfiles de TioSan96
 
 Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, Qt, Kitty, Rofi e mais. Inclui script de instalação automatizado com bootstrap de pacotes, AUR e Stow.
 
