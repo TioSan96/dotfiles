@@ -39,15 +39,15 @@
     "tooltip": true,
     "scroll-step": 5,
     "format": "{icon} {volume}%",
-    "format-muted": "<span color='#7aa2f7'> </span> Muted",
+    "format-muted": "<span color='#F1F1F1'>  </span> Muted",
     "on-click": "amixer sset Master toggle",
     "on-click-right": "pavucontrol",
     "tooltip-format": "{desc}",
     "format-icons": {
         "default": [
-            "<span color='#7aa2f7'></span>",
-            "<span color='#7aa2f7'></span>",
-            "<span color='#7aa2f7'></span>"
+            "<span color='#F1F1F1'></span>",
+            "<span color='#F1F1F1'></span>",
+            "<span color='#F1F1F1'></span>"
         ]
     
     }
@@ -81,13 +81,14 @@
         "6": [],
         "7": [],
         "8": [],
-        "9": []
+        "9": [],
+        "10": []
     }
     },
     "network": {
         "interval": 2,
         "format-wifi": " {essid} {signalStrength}%",
-        "format-ethernet": "⬇️ {bandwidthDownBits} ⬆️ {bandwidthUpBits}",
+        "format-ethernet": "<span color='#F1F1F1'>⬇</span> {bandwidthDownBits} <span color='#F1F1F1'>⬆</span> {bandwidthUpBits}",
         "format-disconnected": "󰤭 Sem conexão",
         "tooltip": true,
         "tooltip-format": "IP: {ipaddr}",
@@ -155,7 +156,7 @@
         "show-passive-items": true
     },
     "custom/updater": {
-    "format": "<span color='#7aa2f7'></span> {}",
+    "format": "<span color='#F1F1F1'>󰇚</span> {}",
     "exec": "$HOME/.config/hypr/scripts/check_and_update.sh",
     "exec-if": "exit 0",
     "return-type": "json",
