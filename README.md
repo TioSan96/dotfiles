@@ -8,7 +8,7 @@ Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, 
 - Conexão à internet
 
 ## Preview
-![Desktop atual](assets/screenshots/preview.png)
+![Preview](assets/preview.png)
 
 ## O que está incluído
 - Hyprland: configs em `hypr/.config/hypr`
