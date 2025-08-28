@@ -1,0 +1,23 @@
+# Mako minimal config matching Waybar semi-transparent look
+# Colors converted: rgba(28,32,44,0.30) -> #1c202c4d
+
+# Placement
+anchor=top-right
+margin=8,8,8,8
+outer-margin=6
+
+# Behavior
+max-visible=4
+layer=overlay
+ignore-timeout=false
+default-timeout=6000
+
+# Appearance
+font=JetBrainsMono Nerd Font 12
+background-color=#4169E1ff
+text-color=#f1f1f1ff
+border-color=#4169E1ff
+border-size=2
+border-radius=5
+padding=8,10
+icons=1
