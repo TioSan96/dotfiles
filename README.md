@@ -1,6 +1,6 @@
 # dotfiles de TioSan96
 
-Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, Qt, Kitty, Rofi e mais. Inclui script de instalação automatizado com bootstrap de pacotes, AUR e Stow.
+Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, Qt, Warp, Rofi e mais. Inclui script de instalação automatizado com bootstrap de pacotes, AUR e Stow.
 
 ## Pré‑requisitos
 - Arch Linux (ou derivado com `pacman`)
@@ -10,10 +10,17 @@ Configurações completas do meu ambiente Arch Linux com Hyprland, Waybar, GTK, 
 ## Preview
 ![Preview](assets/preview.png)
 
+## Novidades em v2.0
+- Notificador: migração para `mako` (substitui `dunst`) com visual unificado ao Hyprland (borda e fundo `#4169E1`, raio `5`, ícones ativados).
+- Terminal padrão: `warp-terminal` (substitui `kitty` como padrão; configs do `kitty` permanecem disponíveis no repo).
+- Installer: passou a stowar o pacote `mako` e incluir `libnotify` (notify-send) no bootstrap pacman. Adicionado `warp-terminal` no AUR.
+- Hyprland: `exec-once = mako` adicionado ao autostart e `$terminal = warp-terminal`.
+
 ## O que está incluído
 - Hyprland: configs em `hypr/.config/hypr`
 - Waybar: temas, módulos e scripts em `waybar/.config/waybar`
-- Kitty: configs em `kitty/.config/kitty`
+- Mako: configuração em `mako/.config/mako`
+- Kitty (opcional): configs em `kitty/.config/kitty`
 - Rofi: tema e layout em `rofi/.config/rofi`
 - btop: `btop/.config/btop`
 - GTK 3/4: `gtk3/.config/gtk-3.0`, `gtk4/.config/gtk-4.0`
@@ -54,6 +61,7 @@ O script irá:
   ```bash
   rsync -avh --delete ~/.config/hypr/ hypr/.config/hypr/
   rsync -avh --delete ~/.config/waybar/ waybar/.config/waybar/
+  rsync -avh --delete ~/.config/mako/ mako/.config/mako/
   ```
 - Fazer commit e push:
   ```bash
@@ -61,6 +69,17 @@ O script irá:
   git commit -m "Atualiza configs"
   git push
   ```
+
+## Changelog
+
+### v2.0
+- `mako` como daemon de notificações (visual unificado ao Hyprland)
+- `warp-terminal` como terminal padrão
+- Installer atualizado (stow de `mako`, `libnotify` em pacman e `warp-terminal` no AUR)
+- Hyprland atualizado com autostart de `mako`
+
+### v1.x
+- Configurações originais com `kitty`, Waybar, Hyprland e demais pacotes
 
 ## Licença
 MIT
