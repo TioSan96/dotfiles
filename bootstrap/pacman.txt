@@ -19,7 +19,6 @@ dconf
 discord
 dkms
 dolphin
-dunst
 efibootmgr
 fastfetch
 ffmpegthumbs
@@ -46,6 +45,7 @@ linux-firmware
 linux-zen
 linux-zen-headers
 mako
+libnotify
 nano
 networkmanager
 network-manager-applet
