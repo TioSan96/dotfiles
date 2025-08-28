@@ -54,7 +54,7 @@ fi
 
 # Dotfiles with Stow
 # Add new packages here to be stowed into $HOME
-for pkg in hypr waybar kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss config shell icons wallpapers; do
+for pkg in hypr waybar mako kitty rofi btop gtk3 gtk4 xsettingsd qt5ct code-oss config shell icons wallpapers; do
   if [ -d "$pkg" ]; then
     echo "Stowing $pkg"
     stow -v -R -t "$HOME" "$pkg"
